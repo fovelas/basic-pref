@@ -23,39 +23,15 @@ public final class BasicPref
         this.editor = sharedPref.edit();
     }
 
-    private BasicPref(
-        @NonNull Context context,
-        @NonNull String name
+    public static BasicPref getInstance(
+        @NonNull Context context
     )
-    {
-        this.context = new WeakReference<>(context);
-        this.sharedPref = context.getSharedPreferences(name, Context.MODE_PRIVATE);
-        this.editor = sharedPref.edit();
-    }
-
-    public static BasicPref getInstance(@NonNull Context context)
     {
         if (instance == null)
         {
             synchronized (BasicPref.class)
             {
                 if (instance == null) instance = new BasicPref(context);
-            }
-        }
-
-        return instance;
-    }
-
-    public static BasicPref getInstance(
-        @NonNull Context context,
-        @NonNull String name
-    )
-    {
-        if (instance == null)
-        {
-            synchronized (BasicPref.class)
-            {
-                if (instance == null) instance = new BasicPref(context, name);
             }
         }
 

@@ -4,10 +4,10 @@ plugins {
 }
 
 group = 'com.github.fovelas'
-version = '1.0.0'
+version = '1.0.1'
 
 android {
-    namespace 'com.fovelas.basic_pref'
+    namespace 'com.fovelas.basicpref'
     compileSdk 34
 
     defaultConfig {
@@ -46,7 +46,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.fovelas'
             artifactId = 'basic-pref'
-            version = '1.0.0'
+            version = '1.0.1'
 
             afterEvaluate {
                 from components.release

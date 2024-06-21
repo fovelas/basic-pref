@@ -29,7 +29,7 @@ android {
 }
 
 dependencies {
-    implementation project(':basic_pref')
+    implementation project(':basicpref')
 
     implementation libs.appcompat
     implementation libs.material
